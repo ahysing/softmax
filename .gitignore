@@ -1,3 +1,7 @@
+*.cu.o
+*.cpp.o
+*.cuh.o
+*.h.o
 *.i
 *.ii
 *.gpu
