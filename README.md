@@ -56,7 +56,7 @@ These command line flags are supported.
 
 For **n > 2048** the program will fall back to calculate the function on the CPU. This is limited by the number of threads that a Nvidia GPU can start on a single kernel launch.
 
-[Makefile](Makefile) holds the compilation process. This file has been hard coded to compile for CUDA capability 3.2. For commpilation on your device update your compute capability in this file. Update  the code block `-gencode arch=compute_32,code=sm_32`. For more info see [Nvidia Developer Zone - CUDA Compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html)
+[Makefile](Makefile) holds the compilation process. This file has been hard coded to compile for CUDA capability 3.2. For compilation on your device update your compute capability in this file. Update  the code block `-gencode arch=compute_32,code=sm_32`. For more info see [Nvidia Developer Zone - CUDA Compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html)
 
 For large amount of input numbers the denominator of softmax will overflow. There is simply not enough information in IEEE 754 floating point to store this denominator. In practice this limit is reached between **n = 750** and **n = 800** for the artimetic series 1, 2, 3, 4, ... n. This is easily spotted by detecting `-nan` (not a number) for all output numbers.
 
