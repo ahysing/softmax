@@ -1,0 +1,9 @@
+# This file serves a single purpose. It is there to help developers debugging
+# because the header files shows up as source files in the IDE
+target_sources(${EXECUTABLE}
+    PRIVATE
+    ${CMAKE_CURRENT_LIST_DIR}/softmax.cuh
+    ${CMAKE_CURRENT_LIST_DIR}/helper_cuda.h
+    ${CMAKE_CURRENT_LIST_DIR}/helper_string.h
+    ${CMAKE_CURRENT_LIST_DIR}/stdin_reader.h
+)
